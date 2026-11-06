@@ -957,8 +957,9 @@
 
             <div>
                 <div class="sent-banner" id="sent-banner"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg> Thank you! Your request was sent. Steve will contact you shortly.</div>
-                <!-- Form sends to Steve's email. The address is not written in the page; it is assembled by the script at the bottom. -->
-                <form id="quote-form-el" method="POST" action="#">
+                
+                <form id="quote-form-el" method="POST" action="https://formsubmit.co/bfdd02cc-b33b-4832-80f1-685d08c39fc3">
+                    <input type="hidden" name="access_key" value="bfdd02cc-b33b-4832-80f1-685d08c39fc3">
 
                     <input type="hidden" name="_subject" value="New Security Quote Request - Spike Fencing">
                     <input type="hidden" name="_template" value="table">
@@ -1058,13 +1059,8 @@
 
     <script>
         (function () {
-            // Email is built here so it is not written in plain text in the page.
-            var u = 'info@spikefencing.co.za
-            var alias = '';<input type="hidden" name="access_key" value="bfdd02cc-b33b-4832-80f1-685d08c39fc3">
-   // optional: paste your FormSubmit random code here later to hide the email completely
             var f = document.getElementById('quote-form-el');
             f.addEventListener('submit', function () {
-                f.action =  + (alias || (u + '@' + h));
                 document.getElementById('next-url').value = location.origin + location.pathname + '?sent=1#quote-form';
             });
             if (location.search.indexOf('sent=1') > -1) {
