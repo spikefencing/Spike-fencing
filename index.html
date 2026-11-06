@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en-ZA">
 <head> <!-- Google tag (gtag.js) -->
@@ -1068,11 +1069,10 @@
     <script>
         (function () {
             // Email is built here so it is not written in plain text in the page.
-            var u = 'spikefencing1', h = 'gmail.com';
-            var alias = ''; // optional: paste your FormSubmit random code here later to hide the email completely
+            var u = 'info', h = 'spikefencing.co.za';
             var f = document.getElementById('quote-form-el');
             f.addEventListener('submit', function () {
-                f.action = 'https://formsubmit.co/' + (alias || (u + '@' + h));
+                f.action = 'https://formsubmit.co/' + (u + '@' + h);
                 document.getElementById('next-url').value = location.origin + location.pathname + '?sent=1#quote-form';
             });
             if (location.search.indexOf('sent=1') > -1) {
@@ -1082,3 +1082,5 @@
     </script>
 </body>
 </html>
+
+```
